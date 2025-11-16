@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Life - Register</title> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img src="images/shop_logo.png" alt="Sweet Life Logo">
+            <figcaption>Sweet Life</figcaption>
+        </figure>
+    </header>
+    
+    <nav>
+        <img src="images/shop_logo.png" alt="Sweet Life Logo" class="nav-logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li class="active"><a href="register.html">Register</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-forms">
+        <section class="form-section">
+            <h2>Register</h2>
+            <form id="registration-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <fieldset>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <span class="error-message" id="username-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="password-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <span class="error-message" id="birthdate-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <ul class="radio-group">
+                        <li>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </li>
+                    </ul>
+                    <span class="error-message" id="gender-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <label for="favorite-icecream">Favorite Ice Cream:
+                        <span class="tooltip">
+                            <span class="tooltip-trigger">?</span>
+                            <span class="tooltip-text">Let us know about your favourite ice-cream and we will notify you when discounts on the specific product is available.</span>
+                        </span>
+                    </label>
+                    <select id="favorite-icecream" name="favorite-icecream" required>
+                        <option value="">(Select your favorite ice cream)</option>
+                        <option value="black-forest">Black Forest</option>
+                        <option value="dark-chocolate">Dark Chocolate</option>
+                        <option value="vanilla-pearl">Vanilla Pearl</option>
+                        <option value="strawberry-pink">Strawberry Pink</option>
+                        <option value="mango-yellow">Mango Yellow</option>
+                        <option value="peach-fantasy">Peach Fantasy</option>
+                        <option value="lemon-soury">Lemon Soury</option>
+                    </select>
+                    <span class="error-message" id="favorite-error"></span>
+                </fieldset>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sweet Life Ice Cream. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

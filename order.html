@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Life - Order</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <figure class="logo">
+            <img src="images/shop_logo.png" alt="Sweet Life Logo">
+            <figcaption>Sweet Life</figcaption>
+        </figure>
+    </header>
+    
+    <nav>
+        <img src="images/shop_logo.png" alt="Sweet Life Logo" class="nav-logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li class="active"><a href="order.html">Order</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-forms">
+        <section class="form-section">
+            <h2>Order Form</h2>
+            <form id="order-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <fieldset>
+                    <legend>Order Type:</legend>
+                    <ul class="radio-group">
+                        <li>
+                            <input type="radio" id="delivery" name="order-type" value="delivery">
+                            <label for="delivery">Delivery</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pickup" name="order-type" value="pickup" checked>
+                            <label for="pickup">Pickup</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Your Order</legend>
+                    <fieldset>
+                        <label for="ice-cream-flavor">Select your Ice Cream:</label>
+                        <select id="ice-cream-flavor" name="ice-cream-flavor" required>
+                            <option value="">(Choose your ice cream)</option>
+                            <option value="black-forest">Black Forest -- MYR 20.99</option>
+                            <option value="dark-chocolate">Dark Chocolate -- MYR 22.99</option>
+                            <option value="vanilla-pearl">Vanilla Pearl -- MYR 21.99</option>
+                            <option value="strawberry-pink">Strawberry Pink -- MYR 23.99</option>
+                            <option value="mango-yellow">Mango Yellow -- MYR 22.99</option>
+                            <option value="peach-fantasy">Peach Fantasy -- MYR 23.99</option>
+                            <option value="lemon-soury">Lemon Soury -- MYR 21.99</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="order-notes">Additional Notes:
+
+                            <span class="tooltip">
+                                <span class="tooltip-trigger">?</span>
+                                <span class="tooltip-text">Write down your specific requests for your order.</span>
+                            </span>
+                        </label>
+                        <textarea id="order-notes" name="order-notes" cols="50" rows="8" placeholder="Additional Notes"></textarea>
+                    </fieldset>
+                </fieldset>
+
+                <section id="delivery-address-section" style="display: none;">
+                    <h3>Delivery Address</h3>
+                    <fieldset>
+                        <label for="street">Street:</label>
+                        <input type="text" id="street" name="street">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="suburb">Suburb:</label>
+                        <input type="text" id="suburb" name="suburb">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" name="postcode">
+                        <span class="error-message" id="postcode-error"></span>
+                    </fieldset>
+                </section>
+                
+                <section id="billing-address-section" style="display: none;">
+                    <fieldset>
+                        <h3>Billing Address</h3>
+                        
+                        
+                        <section id="billing-address-fields">
+                            <fieldset>
+                                <label for="billing-street">Street:</label>
+                                <input type="text" id="billing-street" name="billing-street">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="billing-suburb">Suburb:</label>
+                                <input type="text" id="billing-suburb" name="billing-suburb">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="billing-state">State:</label>
+                                <input type="text" id="billing-state" name="billing-state">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="billing-postcode">Postcode:</label>
+                                <input type="text" id="billing-postcode" name="billing-postcode">
+                                <span class="error-message" id="billing-postcode-error"></span>
+                            </fieldset>
+                        </section>
+                    </fieldset>
+                </section>
+                
+                <fieldset>
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact">
+                    <span class="error-message" id="contact-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <label for="receipt-email">Email for Receipt:</label>
+                    <input type="email" id="receipt-email" name="receipt-email">
+                    <span class="error-message" id="receipt-email-error"></span>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Payment Method:</legend>
+                    <ul class="radio-group">
+                        <li>
+                            <input type="radio" id="pay-pickup" name="payment" value="pickup" checked>
+                            <label for="pay-pickup">Pay on Pickup</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="pay-online" name="payment" value="online">
+                            <label for="pay-online">Pay Online</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                
+                <section id="credit-card-section" style="display: none;">
+                    <h3>Credit Card Information</h3>
+                    
+                    <fieldset>
+                        <label for="card-type">Card Type:</label>
+                        <select id="card-type" name="card-type">
+                            <option value="">(Select card type)</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">MasterCard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number">
+                        <span class="error-message" id="card-number-error"></span>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="card-name">Name on Card:</label>
+                        <input type="text" id="card-name" name="card-name">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="month" id="expiry" name="expiry">
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label for="cvv">CVV:
+                            <span class="tooltip">
+                                <span class="tooltip-trigger">?</span>
+                                <span class="tooltip-text">The 3 or 4-digit code on the back of your card.</span>
+                            </span>
+                        </label>
+                        <input type="text" id="cvv" name="cvv" maxlength="4">
+                    </fieldset>
+                </section>
+                
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sweet Life Ice Cream. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
