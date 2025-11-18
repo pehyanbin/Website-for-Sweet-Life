@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
     <title>Sweet Life - Order</title>
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header section containing the logo and site name -->
     <header>
         <figure class="logo">
             <img src="images/shop_logo.png" alt="Sweet Life Logo">
@@ -14,12 +18,16 @@
         </figure>
     </header>
     
+    <!-- Navigation menu -->
     <nav>
+        <!-- Logo displayed in the navigation bar -->
         <img src="images/shop_logo.png" alt="Sweet Life Logo" class="nav-logo">
+        <!-- List of navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="register.html">Register</a></li>
+            <!-- The 'active' class indicates the current page -->
             <li class="active"><a href="order.html">Order</a></li>
             <li><a href="features.html">Features</a></li>
         </ul>
@@ -28,7 +36,9 @@
     <main class="main-forms">
         <section class="form-section">
             <h2>Order Form</h2>
+            <!-- The order form sends data to a server-side script -->
             <form id="order-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <!-- Fieldset for selecting order type (Delivery/Pickup) -->
                 <fieldset>
                     <legend>Order Type:</legend>
                     <ul class="radio-group">
@@ -43,8 +53,10 @@
                     </ul>
                 </fieldset>
                 
+                <!-- Fieldset for the actual order details -->
                 <fieldset>
                     <legend>Your Order</legend>
+                    <!-- Fieldset for selecting ice cream flavor -->
                     <fieldset>
                         <label for="ice-cream-flavor">Select your Ice Cream:</label>
                         <select id="ice-cream-flavor" name="ice-cream-flavor" required>
@@ -58,10 +70,12 @@
                             <option value="lemon-soury">Lemon Soury -- MYR 21.99</option>
                         </select>
                     </fieldset>
+                    <!-- Fieldset for quantity input -->
                     <fieldset>
                         <label for="quantity">Quantity:</label>
                         <input type="number" id="quantity" name="quantity" min="1" value="1" required>
                     </fieldset>
+                    <!-- Fieldset for additional notes with a tooltip -->
                     <fieldset>
                         <label for="order-notes">Additional Notes:
 
@@ -74,6 +88,7 @@
                     </fieldset>
                 </fieldset>
 
+                <!-- Section for delivery address, initially hidden -->
                 <section id="delivery-address-section" style="display: none;">
                     <h3>Delivery Address</h3>
                     <fieldset>
@@ -98,11 +113,13 @@
                     </fieldset>
                 </section>
                 
+                <!-- Section for billing address, initially hidden -->
                 <section id="billing-address-section" style="display: none;">
                     <fieldset>
                         <h3>Billing Address</h3>
                         
                         
+                        <!-- Fields for billing address details -->
                         <section id="billing-address-fields">
                             <fieldset>
                                 <label for="billing-street">Street:</label>
@@ -128,18 +145,21 @@
                     </fieldset>
                 </section>
                 
+                <!-- Fieldset for contact number input -->
                 <fieldset>
                     <label for="contact">Contact Number:</label>
                     <input type="tel" id="contact" name="contact">
                     <span class="error-message" id="contact-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for receipt email input -->
                 <fieldset>
                     <label for="receipt-email">Email for Receipt:</label>
                     <input type="email" id="receipt-email" name="receipt-email">
                     <span class="error-message" id="receipt-email-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for payment method selection -->
                 <fieldset>
                     <legend>Payment Method:</legend>
                     <ul class="radio-group">
@@ -154,9 +174,11 @@
                     </ul>
                 </fieldset>
                 
+                <!-- Section for credit card information, initially hidden -->
                 <section id="credit-card-section" style="display: none;">
                     <h3>Credit Card Information</h3>
                     
+                    <!-- Fieldset for card type selection -->
                     <fieldset>
                         <label for="card-type">Card Type:</label>
                         <select id="card-type" name="card-type">
@@ -167,24 +189,29 @@
                         </select>
                     </fieldset>
                     
+                    <!-- Fieldset for card number input -->
                     <fieldset>
                         <label for="card-number">Card Number:</label>
                         <input type="text" id="card-number" name="card-number">
                         <span class="error-message" id="card-number-error"></span>
                     </fieldset>
                     
+                    <!-- Fieldset for name on card input -->
                     <fieldset>
                         <label for="card-name">Name on Card:</label>
                         <input type="text" id="card-name" name="card-name">
                     </fieldset>
                     
+                    <!-- Fieldset for expiry date input -->
                     <fieldset>
                         <label for="expiry">Expiry Date:</label>
                         <input type="month" id="expiry" name="expiry">
                     </fieldset>
                     
+                    <!-- Fieldset for CVV input with a tooltip -->
                     <fieldset>
                         <label for="cvv">CVV:
+                            <!-- Tooltip for CVV explanation -->
                             <span class="tooltip">
                                 <span class="tooltip-trigger">?</span>
                                 <span class="tooltip-text">The 3 or 4-digit code on the back of your card.</span>
@@ -194,15 +221,19 @@
                     </fieldset>
                 </section>
                 
+                <!-- Submit button for the form -->
                 <button type="submit">Place Order</button>
             </form>
         </section>
     </main>
 
+    <!-- Footer section with copyright information -->
     <footer>
         <p>&copy; 2025 Sweet Life Ice Cream. All rights reserved.</p>
     </footer>
 
+    <!-- External JavaScript files for interactivity and form data persistence -->
     <script src="js/script.js"></script>
+    <script src="js/form_storage.js"></script>
 </body>
 </html>

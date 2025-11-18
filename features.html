@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
     <title>Sweet Life - Features</title>
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Custom ID for background styling specific to this page -->
 </head>
 <body id="feature-background">
+    <!-- Header section containing the logo and site name -->
     <header>
         <figure class="logo">
             <img src="images/shop_logo.png" alt="Sweet Life Logo">
@@ -14,57 +19,77 @@
         </figure>
     </header>
     
+    <!-- Navigation menu -->
     <nav>
+        <!-- Logo displayed in the navigation bar -->
         <img src="images/shop_logo.png" alt="Sweet Life Logo" class="nav-logo">
+        <!-- List of navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="register.html">Register</a></li>
             <li><a href="order.html">Order</a></li>
+            <!-- The 'active' class indicates the current page -->
             <li class="active"><a href="features.html">Features</a></li>
         </ul>
     </nav>
 
+    <!-- Main content area for the features page -->
     <main>
+        <!-- Section to list and describe implemented features -->
         <section class="features">
             <h1>Implemented Features</h1>
             
+            <!-- Feature item: Highlighted Menu Item -->
             <article class="feature-item">
                 <h3>1. Highlighted Menu Item</h3>
                 <p>The navigation menu highlights the current page to provide visual feedback to users.</p>
                 <p><strong>Implementation:</strong> This feature is implemented across all pages. You can see it in action by navigating between pages.</p>
             </article>
             
+            <!-- Feature item: Adaptive Credit Card Length -->
             <article class="feature-item">
                 <h3>2. Adaptive Credit Card Length</h3>
                 <p>The credit card number field adapts its validation based on the selected card type (16 digits for Visa/MasterCard, 15 digits for American Express).</p>
                 <p><strong>Implementation:</strong> This feature is implemented on the <a href="order.html">Order page</a> when "Pay Online" is selected.</p>
             </article>
             
+            <!-- Feature item: Form Validation -->
             <article class="feature-item">
                 <h3>3. Form Validation</h3>
                 <p>All forms include comprehensive validation with inline error messages.</p>
                 <p><strong>Implementation:</strong> This feature is implemented on both the <a href="register.html">Registration page</a> and <a href="order.html">Order page</a>.</p>
             </article>
 
+            <!-- Feature item: Tooltip -->
             <article class="feature-item">
                 <h3>4. Tooltip</h3>
                 <p>Tooltip when hovering over the "Pay Online" CVV field checkbox to explain the payment method.</p>
                 <p><strong>Implementation:</strong> This feature is implemented on the <a href="order.html">Order page</a>.</p>
             </article>
 
+            <!-- Feature item: Input Format Validation -->
             <article class="feature-item">
                 <h3>5. Input Format Validation</h3>
                 <p>Specific fields like email and contact number are validated to ensure the data format is correct before submission.</p>
                 <p><strong>Implementation:</strong> This is applied on the <a href="order.html">Order page</a> and the <a href="register.html">Registration page</a>.</p>
             </article>
+
+            <!-- Feature item: Local Storage -->
+            <article class="feature-item">
+                <h3>6. Local Storage</h3>
+                <p>The registration and order forms automatically save your input to your browser's local storage. If you refresh the page or accidentally close the tab, your data will be re-populated, so you don't lose your progress.</p>
+                <p><strong>Implementation:</strong> This feature is active on the <a href="register.html">Registration page</a> and the <a href="order.html">Order page</a>.</p>
+            </article>
         </section>
     </main>
 
+    <!-- Footer section with copyright information -->
     <footer>
         <p>&copy; 2025 Sweet Life Ice Cream. All rights reserved.</p>
     </footer>
 
+    <!-- External JavaScript file for interactivity -->
     <script src="js/script.js"></script>
 </body>
 </html>

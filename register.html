@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
     <title>Sweet Life - Register</title> 
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header section containing the logo and site name -->
     <header>
         <figure class="logo">
             <img src="images/shop_logo.png" alt="Sweet Life Logo">
@@ -14,47 +18,64 @@
         </figure>
     </header>
     
+    <!-- Navigation menu -->
     <nav>
+        <!-- Logo displayed in the navigation bar -->
         <img src="images/shop_logo.png" alt="Sweet Life Logo" class="nav-logo">
+        <!-- List of navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
+            <!-- The 'active' class indicates the current page -->
             <li class="active"><a href="register.html">Register</a></li>
             <li><a href="order.html">Order</a></li>
             <li><a href="features.html">Features</a></li>
         </ul>
     </nav>
 
+    <!-- Main content area for the registration form -->
     <main class="main-forms">
+        <!-- Section that wraps the form -->
         <section class="form-section">
             <h2>Register</h2>
+            <!-- The registration form sends data to a server-side script -->
             <form id="registration-form" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <!-- Fieldset for username input -->
                 <fieldset>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
+                    <!-- Span to display validation error messages for the username -->
                     <span class="error-message" id="username-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for password input -->
                 <fieldset>
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
+                    <!-- Span to display validation error messages for the password -->
                     <span class="error-message" id="password-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for email input -->
                 <fieldset>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <!-- Span to display validation error messages for the email -->
                     <span class="error-message" id="email-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for birthdate input -->
                 <fieldset>
                     <label for="birthdate">Birthdate:</label>
                     <input type="date" id="birthdate" name="birthdate" required>
+                    <!-- Span to display validation error messages for the birthdate -->
                     <span class="error-message" id="birthdate-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for gender selection -->
                 <fieldset>
                     <legend>Gender:</legend>
+                    <!-- Radio button group for gender options -->
                     <ul class="radio-group">
                         <li>
                             <input type="radio" id="male" name="gender" value="male">
@@ -64,21 +85,21 @@
                             <input type="radio" id="female" name="gender" value="female">
                             <label for="female">Female</label>
                         </li>
-                        <li>
-                            <input type="radio" id="other" name="gender" value="other">
-                            <label for="other">Other</label>
-                        </li>
                     </ul>
+                    <!-- Span to display validation error messages for gender selection -->
                     <span class="error-message" id="gender-error"></span>
                 </fieldset>
                 
+                <!-- Fieldset for favorite ice cream selection -->
                 <fieldset>
                     <label for="favorite-icecream">Favorite Ice Cream:
+                        <!-- Tooltip with additional information -->
                         <span class="tooltip">
                             <span class="tooltip-trigger">?</span>
                             <span class="tooltip-text">Let us know about your favourite ice-cream and we will notify you when discounts on the specific product is available.</span>
                         </span>
                     </label>
+                    <!-- Dropdown menu for selecting favorite ice cream -->
                     <select id="favorite-icecream" name="favorite-icecream" required>
                         <option value="">(Select your favorite ice cream)</option>
                         <option value="black-forest">Black Forest</option>
@@ -89,18 +110,23 @@
                         <option value="peach-fantasy">Peach Fantasy</option>
                         <option value="lemon-soury">Lemon Soury</option>
                     </select>
+                    <!-- Span to display validation error messages for the selection -->
                     <span class="error-message" id="favorite-error"></span>
                 </fieldset>
                 
+                <!-- Submit button for the form -->
                 <button type="submit">Register</button>
             </form>
         </section>
     </main>
 
+    <!-- Footer section with copyright information -->
     <footer>
         <p>&copy; 2025 Sweet Life Ice Cream. All rights reserved.</p>
     </footer>
 
+    <!-- External JavaScript files for interactivity and form data persistence -->
     <script src="js/script.js"></script>
+    <script src="js/form_storage.js"></script>
 </body>
 </html>

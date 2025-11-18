@@ -12,6 +12,7 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Header */
 header {
     background-color: #8D6E63;
     color: white;
@@ -21,6 +22,7 @@ header {
     justify-content: center;
 }
 
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -36,6 +38,7 @@ header {
     font-family: 'Times New Roman', serif;
 }
 
+/* Navigation Bar */
 nav {
     position: fixed;
     top: 0;
@@ -78,6 +81,7 @@ nav ul li a {
     min-width: 120px;
 }
 
+/* Unique background colors for each link */
 nav ul li:nth-child(1) a {
     background-color: #FFC69D;
 }
@@ -107,7 +111,7 @@ nav ul li.active a {
     font-weight: bold;
 }
 
-
+/* Main Content */
 main {
     padding: 2rem 0;
 }
@@ -122,6 +126,7 @@ main {
     padding: 80px; 
 }
 
+/* Hero Section */
 .hero {
     background-color: #FFC69D;
     padding: 3rem 0;
@@ -162,6 +167,7 @@ main {
     padding: 2rem 0;
 }
 
+/* Ice Cream Section in Product page*/
 .ice-creams {
     background-color: #fa9d5b;
 }
@@ -183,6 +189,7 @@ main {
     font-size: 2.5rem;
 }
 
+/* Location Section */
 .location p, .location img {
     font-size: 20px;
     margin: 0 auto;
@@ -212,6 +219,7 @@ main {
     font-size: 2rem;
 }
 
+/* Ice Cream Grid in Product page */
 .ice-cream-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -266,6 +274,7 @@ main {
     background-color: #d3b15a;
 }
 
+/* Form Section */
 .form-section {
     
     margin: 0 auto;
@@ -352,6 +361,7 @@ button[type="submit"]:hover {
     display: block;
 }
 
+/* Feature Section */
 #feature-background {
     background-color: #f4ccc9;
 }
@@ -395,7 +405,7 @@ button[type="submit"]:hover {
 }
 
 
-
+/* Tooltip Styles */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -430,6 +440,7 @@ button[type="submit"]:hover {
     opacity: 1;
 }
 
+/* Footer */
 footer {
     background-color: #CD2C58; 
     color: white;
@@ -438,6 +449,7 @@ footer {
     margin-top: 2rem;
 }
 
+/* Responsive Styles for mobile screen */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
